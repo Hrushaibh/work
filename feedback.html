@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" href="/mini project/favicon.ico.png" type="image/x-icon">
+<link rel="icon" href="/project_1/favicon.ico.png" type="image/x-icon">
 <title>Feedback</title>
 <script>
 function submitFeedback() {
-    status.innerText = "Feedback submitted successfully ✅ Thank you!";
+    const status = document.getElementById("status");
+    const feedbackForm = document.getElementById("feedbackForm");
+    status.innerText = "Feedback submitted successfully, Thank you!";
     feedbackForm.reset();
-    return false;
+    return false; // prevents page refresh
 }
 </script>
 </head>
 <body>
 <h2>Feedback & Contact</h2>
 <form id="feedbackForm" onsubmit="return submitFeedback()">
-<input type="text" placeholder="Your Name" required><br><br>
-<input type="email" placeholder="Your Email" required><br><br>
-<textarea rows="4" placeholder="Your Feedback" required></textarea><br><br>
-<input type="submit" value="Send Feedback">
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <textarea rows="4" placeholder="Your Feedback" required></textarea><br><br>
+    <input type="submit" value="Send Feedback">
 </form>
 <p id="status" style="color:green;font-weight:bold;"></p>
 <p>Contact Email: edutech@gmail.com</p>
